@@ -22,7 +22,7 @@ namespace Расписание
         {
             try
             {
-                using (var reader = new StreamReader($"C:\\Users\\{Environment.UserName}\\Documents\\add_files_schedule\\connection.txt"))
+                using (var reader = new StreamReader(Path.Combine(Directory.GetCurrentDirectory(), "connection.txt")))
                 {
                     var yaml = new YamlStream();
                     yaml.Load(reader);
